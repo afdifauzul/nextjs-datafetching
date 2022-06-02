@@ -32,11 +32,11 @@ const SSR = ({data}) => {
                         {
                             data.meals?.map((meal) => (
                                 <Link
-                                    href={{pathname: `ssr/${meal.idMeal}`}}>
+                                    href={{pathname: `ssr/${meal.idMeal}`}} key={index}>
                                     <div className={custom.meal_card} key={meal.idMeal}>
                                         <center>
                                             <p>{meal.strMeal}</p>
-                                            <img style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
+                                            <Image style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
                                             <br/>
                                         </center>
                                     </div>

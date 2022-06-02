@@ -39,7 +39,7 @@ const Detail = ({meal}) => {
                     <h1 className={styles.title}>
                         {meal.strMeal}
                     </h1>
-                    <Image src={meal.strMealThumb} width={250} height={250}/>
+                    <Image alt="" src={meal.strMealThumb} width={250} height={250}/>
                     <div>
                         <p>{meal.strInstructions}</p>
                     </div>

@@ -17,7 +17,7 @@ const Detail = () => {
                         {query.title}
                     </h1>
                     <div className={custom.image} >
-                        <Image src={query.image} width={300} height={300}/>
+                        <Image alt="" src={query.image} width={300} height={300}/>
                     </div>
                     <p>{query.content}</p>
                 </div>

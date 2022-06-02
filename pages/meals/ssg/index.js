@@ -25,15 +25,15 @@ const SSG = ({data}) => {
             </h1>
             {
                 data.meals && data.meals.length > 0 ? (
-                    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap' }} >
                         {
                             data.meals?.map((meal) => (
                                     <Link
-                                    href={{pathname: `ssg/${meal.idMeal}`}}>
+                                    href={{pathname: `ssg/${meal.idMeal}`}} key={index}>
                                         <div className={custom.meal_card} key={meal.idMeal}>
                                             <center>
                                                 <p>{meal.strMeal}</p>
-                                                <img style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
+                                                <Image style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
                                                 <br/>
                                             </center>
                                         </div>

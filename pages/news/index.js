@@ -12,7 +12,7 @@ const News = () => {
                 News 
             </h1>
             {
-                news.map((item)=>(
+                news.map((item,index)=>(
                     <Link
                         href={{
                             pathname: `/news/${item.url}`,
@@ -23,11 +23,12 @@ const News = () => {
                             },
                         }}
                         as={`/news/${item.url}`}
+                        key={index}
                     >
-                        <div className={styles.grid} key={item.id}>
+                        <div className={styles.grid} key={index}>
                             <ul>
                                 <center>
-                                <Image src={item.image} width={100} height={100}/>
+                                <Image alt="" src={item.image} width={100} height={100}/>
                                 </center>
                                 
                                     <h3>
