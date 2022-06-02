@@ -13,7 +13,10 @@ export async function getServerSideProps(ctx) {
     return { props: { meal } }
 }
 
-const DetailMeal = dynamic(() => import('@/components/DetailMeal'));
+const DetailMeal = dynamic(
+    () => import('@/components/DetailMeal'),
+    { loading: () => <p>...</p> }
+);
 
 const Detail = ({meal}) => {
     console.log("meal");
