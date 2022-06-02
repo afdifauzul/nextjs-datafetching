@@ -30,10 +30,10 @@ const ISR = ({data}) => {
                     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                         {
                             data.meals?.map((meal,index) => (
-                                <div className={custom.meal_card} key={meal.idMeal}>
+                                <div className={custom.meal_card} key={index}>
                                     <center>
                                     <p>{meal.strMeal}</p>
-                                    <Image style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
+                                    <Image width={100} height={100} src={meal.strMealThumb} alt={meal.strMeal} />
                                     <br/>
                                     </center>
                                 </div>

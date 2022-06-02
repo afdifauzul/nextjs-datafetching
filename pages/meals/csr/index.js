@@ -34,7 +34,7 @@ const CSR = () => {
                         <div className={custom.meal_card} key={meal.idMeal}>
                             <center>
                                 <p>{meal.strMeal}</p>
-                                <Image style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
+                                <Image width={100} height={100} src={meal.strMealThumb} alt={meal.strMeal} />
                                 <br/>
                             </center>
                         </div>
