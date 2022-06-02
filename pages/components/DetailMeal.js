@@ -11,7 +11,7 @@ function DetailMail({data}) {
                     <h1 className={styles.title}>
                         {data.strMeal}
                     </h1>
-                    <Image src={data.strMealThumb} width={250} height={250}/>
+                    <Image src={data.strMealThumb} alt="" width={250} height={250}/>
                     <div>
                         <p>{data.strInstructions}</p>
                     </div>
