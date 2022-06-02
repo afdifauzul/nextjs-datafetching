@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css';
+import {React,Fragment} from 'react'
 
 export async function getStaticProps() {
     const res = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')

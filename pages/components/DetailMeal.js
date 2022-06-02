@@ -1,7 +1,8 @@
-import React from 'react'
+import {React,Fragment} from 'react'
 import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css'
 import Image from 'next/image';
+
 
 function DetailMail({data}) {
     return (
