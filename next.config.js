@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['www.lampost.co']
+    domains: ['www.lampost.co','www.themealdb.com']
   }
 }
 
