@@ -19,12 +19,25 @@ const DetailMeal = dynamic(
 );
 
 const Detail = ({meal}) => {
-    console.log("meal");
+    // console.log("meal");
     console.log(meal);
 
     return (
         <div className={styles.container}>
-            <DetailMeal data={meal}/>
+            <main className={styles.main}>
+                <div className={custom.meal_detail}>
+                    <h1 className={styles.title}>
+                        {meal.strMeal}
+                    </h1>
+                    <DetailMeal data={meal}/>
+                </div>
+            </main>
+            <style global jsx>{`
+                body{
+                    background: grey;
+                }
+            `}
+            </style>
         </div>
     )
 }
