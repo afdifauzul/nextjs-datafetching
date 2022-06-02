@@ -15,7 +15,6 @@ export async function getServerSideProps(ctx) {
 
 const DetailMeal = dynamic(
     () => import('@/components/DetailMeal'),
-    { loading: () => <p>Loading...</p> },
 );
 
 const Detail = ({meal}) => {

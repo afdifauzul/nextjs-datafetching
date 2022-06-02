@@ -9,15 +9,15 @@ function DetailMeal({data}) {
     console.log(data);
     return (
         <div>
-            <h1 className={styles.title}>
+            {/* <h1 className={styles.title}>
                 {data.strMeal}
             </h1>
                 <Image src={data.strMealThumb} alt="" width={250} height={250} />
             <div>
                 <p>{data.strInstructions}</p>
-            </div>
-            {/* {
-                data.length > 0 ? (
+            </div> */}
+            {
+                data ? (
                     <><h1 className={styles.title}>
                         {data.strMeal}
                     </h1>
@@ -28,7 +28,7 @@ function DetailMeal({data}) {
                 ):(
                     <p>Loading....</p>
                 )
-            } */}
+            }
             
         </div>
         
