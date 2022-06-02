@@ -1,0 +1,7 @@
+.news_detail {
+    border: 10px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 500px;
+    text-align: center;
+    margin-top: 10px;
+}
