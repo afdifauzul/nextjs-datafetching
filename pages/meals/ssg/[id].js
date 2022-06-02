@@ -35,12 +35,14 @@ const Detail = ({meal}) => {
     return (
         <div className={styles.container}>
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    {meal.strMeal}
-                </h1>
-                <Image src={meal.strMealThumb} width={250} height={250}/>
-                <div>
-                    <p>{meal.strInstructions}</p>
+                <div className={custom.meal_detail}>
+                    <h1 className={styles.title}>
+                        {meal.strMeal}
+                    </h1>
+                    <Image src={meal.strMealThumb} width={250} height={250}/>
+                    <div>
+                        <p>{meal.strInstructions}</p>
+                    </div>
                 </div>
             </main>
             <style global jsx>{`

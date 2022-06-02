@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css'
+import custom from '@/styles/custom.module.css';
 
 export async function getServerSideProps() {
     // Fetch data from external API
@@ -32,13 +33,13 @@ const SSR = ({data}) => {
                             data.meals?.map((meal) => (
                                 <Link
                                     href={{pathname: `ssr/${meal.idMeal}`}}>
-                                    <center>
-                                        <div style={{margin: '16px'}} key={meal.idMeal}>
+                                    <div className={custom.meal_card} key={meal.idMeal}>
+                                        <center>
                                             <p>{meal.strMeal}</p>
                                             <img style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />
                                             <br/>
-                                        </div>
-                                    </center>
+                                        </center>
+                                    </div>
                                 </Link>
                             ))
                         }

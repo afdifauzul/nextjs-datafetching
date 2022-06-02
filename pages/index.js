@@ -12,18 +12,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <card>
-          <h2 className={styles.title}>Afdi Fauzul Bahar - Training NextJs Batch23</h2>
+          <h1 className={styles.title}>Afdi Fauzul Bahar - Training NextJs Batch23</h1>
           <Link href="/about">
-            <p>About</p>
+            <h2>About</h2>
           </Link>
           <Link href="/news">
-            <p>News</p>
+            <h2>News</h2>
           </Link>
           <Link href="/meals">
-            <p>Meals</p>
+            <h2>Fetching Data Meals</h2>
           </Link>
-        </card>
       </main>
 
       {/* <main className={styles.main}>

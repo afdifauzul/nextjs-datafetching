@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import styles from '../../../styles/Home.module.css'
+import styles from '@/styles/Home.module.css';
+import custom from '@/styles/custom.module.css';
 import { useState,useEffect } from "react";
 
 const CSR = () => {
@@ -30,7 +31,7 @@ const CSR = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {
                     data.map(meal => (
-                        <div style={{margin: '16px'}} key={meal.idMeal}>
+                        <div className={custom.meal_card} key={meal.idMeal}>
                             <center>
                                 <p>{meal.strMeal}</p>
                                 <img style={{width: '100px', height: '100px'}} src={meal.strMealThumb} alt={meal.strMeal} />

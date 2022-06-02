@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
-import styles from '../../styles/Home.module.css'
-import custom from '../../styles/custom.module.css'
+import styles from '@/styles/Home.module.css'
+import custom from '@/styles/custom.module.css'
 
 const Detail = () => {
     const router = useRouter();
@@ -10,13 +10,15 @@ const Detail = () => {
 
     console.log(router);
     return (
-        <div className={styles.container}>
+        <div className={custom.container}>
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    {query.title}
-                </h1>
-                <div className={custom.news_card}>
-                    <Image src={query.image} alt="Viral Anak Indigo" width={400} height={400}/>
+                <div className={custom.news_detail}>
+                    <h1 className={styles.title}>
+                        {query.title}
+                    </h1>
+                    <div className={custom.image} >
+                        <Image src={query.image} width={300} height={300}/>
+                    </div>
                     <p>{query.content}</p>
                 </div>
             </main>
