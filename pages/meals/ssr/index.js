@@ -31,7 +31,7 @@ const SSR = ({data}) => {
                 data.meals && data.meals.length > 0 ? (
                     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                         {
-                            data.meals?.map((meal) => (
+                            data.meals?.map((meal,index) => (
                                 <Link
                                     href={{pathname: `ssr/${meal.idMeal}`}} key={index}>
                                     <div className={custom.meal_card} key={meal.idMeal}>

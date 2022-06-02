@@ -29,7 +29,7 @@ const ISR = ({data}) => {
                 data.meals && data.meals.length > 0 ? (
                     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                         {
-                            data.meals?.map((meal) => (
+                            data.meals?.map((meal,index) => (
                                 <div className={custom.meal_card} key={meal.idMeal}>
                                     <center>
                                     <p>{meal.strMeal}</p>
