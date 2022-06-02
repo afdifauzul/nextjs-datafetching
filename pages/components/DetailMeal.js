@@ -4,7 +4,7 @@ import custom from '@/styles/custom.module.css'
 import Image from 'next/image';
 
 
-function DetailMail({data}) {
+function DetailMeal({data}) {
     return (
         <div>
             <main className={styles.main}>
@@ -29,4 +29,4 @@ function DetailMail({data}) {
     )   
 }
 
-export default DetailMail;
+export default DetailMeal;
