@@ -14,13 +14,24 @@ export default function Home() {
       <main className={styles.main}>
           <h1 className={styles.title}>Afdi Fauzul Bahar - Training NextJs Batch23</h1>
           <Link href="/about">
+          <a>
             <h2>About</h2>
+          </a>
           </Link>
           <Link href="/news">
-            <h2>News</h2>
+            <a>
+              <h2>News</h2>
+            </a>
           </Link>
           <Link href="/meals">
-            <h2>Fetching Data Meals</h2>
+            <a>
+              <h2>Fetching Data Meals</h2>  
+            </a>
+          </Link>
+          <Link href="/categories">
+            <a>
+              <h2>Categories</h2>
+            </a>
           </Link>
       </main>
 
