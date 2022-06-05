@@ -1,6 +1,6 @@
 // import {gql,useQuery} from '@apollo/client'
 import Link from 'next/link'
-import { GET_CATEGORIES } from "./schema";
+import { GET_CATEGORIES } from "../../schema";
 import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css';
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import { ButtonBase,Typography } from '@material-ui/core';
 
 
-function index() {
+function Index() {
     const styleCategories=useStyles();
     const {loading,error,data} = useQuery(GET_CATEGORIES)
 
@@ -65,4 +65,4 @@ function index() {
     )   
 }
 
-export default index
+export default Index

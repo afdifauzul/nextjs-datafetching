@@ -1,5 +1,5 @@
 // import useMutation from "@apollo/client";
-import { POST_SUBSCRIBE,GET_PRODUCT } from "schema";
+import { POST_SUBSCRIBE,GET_PRODUCT } from "../../../schema";
 import Button from '@material-ui/core/Button';
 import { useRouter } from "next/router";
 import styles from '@/styles/Home.module.css'
@@ -9,7 +9,7 @@ import Link from "next/link";
 import useState from "react";
 import { subscribe } from "graphql";
 
-const productDetail = ()=>{
+const ProductDetail = ()=>{
     const Router = useRouter();
     console.log("Router");
     console.log(Router.query);
@@ -106,4 +106,4 @@ const productDetail = ()=>{
     )
 }
 
-export default productDetail;
+export default ProductDetail;
