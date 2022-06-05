@@ -1,4 +1,4 @@
-// import useMutation from "@apollo/client";
+import { useQuery,useMutation } from "@apollo/client";
 import { POST_SUBSCRIBE,GET_PRODUCT } from "../../../schema";
 import Button from '@material-ui/core/Button';
 import { useRouter } from "next/router";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useState from "react";
 import { subscribe } from "graphql";
-import { useQuery } from "@apollo/client";
+
 
 const ProductDetail = ()=>{
     const Router = useRouter();
