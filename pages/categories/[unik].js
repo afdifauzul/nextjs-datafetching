@@ -1,5 +1,5 @@
 import { useLazyQuery } from "@apollo/client";
-import { GET_CATEGORIES, GET_PRODUCT_BY_CATEGORY } from "./schema";
+import { GET_CATEGORIES, GET_PRODUCT_BY_CATEGORY } from "../../schema";
 import Button from '@material-ui/core/Button';
 import { useRouter } from "next/router";
 import styles from '@/styles/Home.module.css'
@@ -37,8 +37,8 @@ const Detail = ()=>{
                         <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:'space-around' }}>
                             {
                                 data.category.products.items?.map((item,index) => (
-                                        <a>
-                                            <Paper className={styleCategories.product} key={index}>
+                                        <a key={index}>
+                                            <Paper className={styleCategories.product} >
                                                 <Grid container 
                                                 display="flex"
                                                 direction="row"
