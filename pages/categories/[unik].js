@@ -33,49 +33,41 @@ const Detail = ()=>{
                 <h1 className={styles.title}> 
                     Products  {data.category.name}
                 </h1>
-                {
-                        <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:'space-around' }}>
-                            {
-                                data.category.products.items?.map((item,index) => (
-                                        <a key={index}>
-                                            <Paper className={styleCategories.product} >
-                                                <Grid container 
-                                                display="flex"
-                                                direction="row"
-                                                justifyContent="space-between"
-                                                spacing={2}>
-                                                    <Grid item>
-                                                        <ButtonBase className={styleCategories.image} >
-                                                            <Image width={100} height={100} src={item.image.url} alt={item.image.__typename} />
-                                                        </ButtonBase>
-                                                    </Grid>
-                                                    <Grid item xs={12} sm container>
-                                                        <Grid item xs container direction="column" spacing={10}>
-                                                            <Grid item xs>
-                                                                <Typography variant="subtitle1">
-                                                                    {item.name}
-                                                                </Typography> 
-                                                                <Link
-                                                                    href={{pathname: `detail/${item.sku}`}} key={index}>
-                                                                    <Button variant="contained" color="primary" >
-                                                                        Detail
-                                                                    </Button>
-                                                                </Link>
-                                                            </Grid>
-                                                        </Grid>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:'space-around' }}>
+                    {
+                        data.category.products.items.map((item,index) => (
+                                    <Paper className={styleCategories.product} key={index}>
+                                        <Grid container 
+                                        display="flex"
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        spacing={2}>
+                                            <Grid item>
+                                                <ButtonBase className={styleCategories.image} >
+                                                    <Image width={100} height={100} src={item.image.url} alt={item.image.__typename} />
+                                                </ButtonBase>
+                                            </Grid>
+                                            <Grid item xs={12} sm container>
+                                                <Grid item xs container direction="column" spacing={10}>
+                                                    <Grid item xs>
+                                                        <Typography variant="subtitle1">
+                                                            {item.name}
+                                                        </Typography> 
+                                                        <Link
+                                                            href={{pathname: `detail/${item.sku}`}} key={index}>
+                                                            <Button variant="contained" color="primary" >
+                                                                Detail
+                                                            </Button>
+                                                        </Link>
                                                     </Grid>
                                                 </Grid>
-                                                <center>
-                                                    <p></p>
-                                                    <br/>
-                                                    
-                                                </center>
-                                            </Paper>
-                                        </a>
-                                ))
-                            }
-                        </div>
-                }
+                                            </Grid>
+                                        </Grid>
+                                    </Paper>
+                        ))
+                    }
+                </div>
             </main>
         </div>
     )
