@@ -6,14 +6,14 @@ import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css'
 import Image from "next/image";
 import Link from "next/link";
-import useStyles from './styles';
+import UseStyles from './styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { ButtonBase,Typography } from '@material-ui/core';
 
 
 const Detail = ()=>{
-    const styleCategories=useStyles();
+    const styleCategories=UseStyles();
     const router = useRouter();
     const {query} = router;
     const [getCategories, {loading,error,data}]=useLazyQuery(GET_PRODUCT_BY_CATEGORY,{
