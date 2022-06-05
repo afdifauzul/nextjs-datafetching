@@ -62,9 +62,9 @@ const ProductDetail = ()=>{
                     <h2>
                         {item.price.regularPrice.amount.currency} {item.price.regularPrice.amount.value}
                     </h2>
-                    <p>
+                    <span>
                         <div dangerouslySetInnerHTML={{ __html: item.description.html }} />
-                    </p>
+                    </span>
                 </div>
                 <div className={custom.item_detail}> 
                     <h1 className={styles.title}>
