@@ -1,18 +1,18 @@
-import {gql,UseQuery} from '@apollo/client'
+// import {gql,useQuery} from '@apollo/client'
 import Link from 'next/link'
-import { GET_CATEGORIES } from "../../schema";
+import { GET_CATEGORIES } from "./schema";
 import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css';
 import Image from 'next/image';
-import UseStyles from './styles';
+import useStyles from './styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { ButtonBase,Typography } from '@material-ui/core';
 
 
 function index() {
-    const styleCategories=UseStyles();
-    const {loading,error,data} = UseQuery(GET_CATEGORIES)
+    const styleCategories=useStyles();
+    const {loading,error,data} = useQuery(GET_CATEGORIES)
 
     if(loading)return 'Loading...';
     if(error) return `Error! ${error}`

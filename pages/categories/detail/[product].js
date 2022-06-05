@@ -1,32 +1,32 @@
-import UseMutation from "@apollo/client";
+// import useMutation from "@apollo/client";
 import { POST_SUBSCRIBE,GET_PRODUCT } from "schema";
 import Button from '@material-ui/core/Button';
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css'
 import Image from "next/image";
 import Link from "next/link";
-import UseState from "react";
+import useState from "react";
 import { subscribe } from "graphql";
 
 const productDetail = ()=>{
-    const Router = UseRouter();
+    const Router = useRouter();
     console.log("Router");
     console.log(Router.query);
     const {product}  = Router.query;
     console.log("sku");
     console.log(product);
-    const {loading,error,data}=UseQuery(GET_PRODUCT,{
+    const {loading,error,data}=useQuery(GET_PRODUCT,{
         variables: {
             sku: product,
         }
     });
     
     let input;
-    const [postSubscribe] = UseMutation(POST_SUBSCRIBE);
-    const [email,setEmail] = UseState("");
-    const [responseStatus, setResponseStatus] = UseState(null);
-    const [responseMessage, setResponseMessage] = UseState(null);
+    const [postSubscribe] = useMutation(POST_SUBSCRIBE);
+    const [email,setEmail] = useState("");
+    const [responseStatus, setResponseStatus] = useState(null);
+    const [responseMessage, setResponseMessage] = useState(null);
     const subscribe = async () => {
         const responseSubscribe=await postSubscribe({
             variables:{
