@@ -6,8 +6,14 @@ import styles from '@/styles/Home.module.css'
 import custom from '@/styles/custom.module.css'
 import Image from "next/image";
 import Link from "next/link";
+import useStyles from './styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import { ButtonBase,Typography } from '@material-ui/core';
+
 
 const Detail = ()=>{
+    const styleCategories=useStyles();
     const router = useRouter();
     const {query} = router;
     const [getCategories, {loading,error,data}]=useLazyQuery(GET_PRODUCT_BY_CATEGORY,{
@@ -31,18 +37,41 @@ const Detail = ()=>{
                         <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:'space-around' }}>
                             {
                                 data.category.products.items?.map((item,index) => (
-                                    <Link
-                                        href={{pathname: `detail/${item.sku}`}} key={index}>
                                         <a>
-                                            <div className={custom.item_card} key={index}>
+                                            <Paper className={styleCategories.product} key={index}>
+                                                <Grid container 
+                                                display="flex"
+                                                direction="row"
+                                                justifyContent="space-between"
+                                                spacing={2}>
+                                                    <Grid item>
+                                                        <ButtonBase className={styleCategories.image} >
+                                                            <Image width={100} height={100} src={item.image.url} alt={item.image.__typename} />
+                                                        </ButtonBase>
+                                                    </Grid>
+                                                    <Grid item xs={12} sm container>
+                                                        <Grid item xs container direction="column" spacing={10}>
+                                                            <Grid item xs>
+                                                                <Typography variant="subtitle1">
+                                                                    {item.name}
+                                                                </Typography> 
+                                                                <Link
+                                                                    href={{pathname: `detail/${item.sku}`}} key={index}>
+                                                                    <Button variant="contained" color="primary" >
+                                                                        Detail
+                                                                    </Button>
+                                                                </Link>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
                                                 <center>
-                                                    <p>{item.name}</p>
-                                                    <Image width={100} height={100} src={item.image.url} alt={item.image.__typename} />
+                                                    <p></p>
                                                     <br/>
+                                                    
                                                 </center>
-                                            </div>
+                                            </Paper>
                                         </a>
-                                    </Link>
                                 ))
                             }
                         </div>
