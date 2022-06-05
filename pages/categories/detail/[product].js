@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useState from "react";
 import { subscribe } from "graphql";
+import { useQuery } from "@apollo/client";
 
 const ProductDetail = ()=>{
     const Router = useRouter();
