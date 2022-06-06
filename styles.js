@@ -24,8 +24,8 @@ const UseStyles = makeStyles((theme) => ({
         margin: '10px',
         width : 350,
         maxHeight:250,
-        [theme.breakpoints.up('xs')]: {
-            background: 'grey',
+        [theme.breakpoints.down('md')]: {
+            background: 'yellow',
             color: 'black'
         }
     },

@@ -8,13 +8,14 @@ import useStyles from '../../styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { ButtonBase,Typography } from '@material-ui/core';
+import Skeleton from '@mui/material/Skeleton';
 
 
 function Index() {
     const styleCategories=useStyles();
     const {loading,error,data} = useQuery(GET_CATEGORIES)
 
-    if(loading)return 'Loading...';
+    if(loading)return 'Loading...'
     if(error) return `Error! ${error}`
     console.log("data")
     console.log(data)
@@ -26,14 +27,14 @@ function Index() {
                 </h1>
                 <br/>
                 <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:'space-between' }}>
-                    {data.categories.items.map((item,index)=>(       
+                    {data.categories.items?.map((item,index)=>(       
                             <Paper className={styleCategories.paper} key={index}>
                                     <Grid container spacing={2}>
                                         <Grid item >
                                             <ButtonBase className={styleCategories.image} >
                                                 {item.image_path?(
                                                     <Image className="img" width={100} height={100} src={item.image_path} alt="" />
-                                                ):(<div className={styleCategories.img}/>)}
+                                                ):(<Skeleton variant="rectangular" width={100} height={100} />)}
                                             </ButtonBase>
                                         </Grid>
                                         <Grid item xs={12} sm container>
